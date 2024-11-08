@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "ctsadvfix",
+  "version": "${version}",
+  "name": "creators-adventure-fix",
+  "description": "",
+  "authors": [
+    ""
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/ctsadvfix/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.misakacloud.ctsadvfix.fabric.CTSADVFixFabric"
+    ],
+    "client": [
+      "dev.misakacloud.ctsadvfix.fabric.client.CTSADVFixFabricClient"
+    ]
+  },
+  "mixins": [
+    "creators-adventure-fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "architectury": ">=9.2.14",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

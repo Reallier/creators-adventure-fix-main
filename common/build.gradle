@@ -1,0 +1,27 @@
+architectury {
+    common rootProject.enabled_platforms.split(',')
+}
+loom {
+    runs {
+        client {
+            vmArgs "-Dmixin.debug.export=true"
+        }
+
+    }
+}
+dependencies {
+    // We depend on Fabric Loader here to use the Fabric @Environment annotations,
+    // which get remapped to the correct annotations on each platform.
+    // Do NOT use other classes from Fabric Loader.
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
+//    modCompileOnly "curse.maven:tiny-mob-farm-remastered-986607:${project.tiny_mob_farm_fabric_curseforge_id}-sources-${project.tiny_mob_farm_fabric_source_curseforge_id}"
+//    https://api.modrinth.com/maven/maven/modrinth/tiny-mob-farm-remastered/Q29hxhEt/tinymobfarm-1.2.1-1.20.1-forge-sources.jar
+    modImplementation "curse.maven:tiny-mob-farm-remastered-986607:${project.tiny_mob_farm_fabric_curseforge_id}"
+//    modCompileOnly "curse.maven:supermartijn642s-config-lib-438332:${project.config_library_forge_curseforge_id}"
+//    modCompileOnly "curse.maven:ui-933200:${project.ui_library_file_forge_curseforge_id}"
+
+    modImplementation("curse.maven:ftb-ultimine-fabric-448231:${project.ftbultimine_fabric_curseforge_id}")
+
+}

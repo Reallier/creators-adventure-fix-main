@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.misakacloud.ctsadvfix.forge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "xray.BlockOcclusionCacheMixin"
+  ],
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

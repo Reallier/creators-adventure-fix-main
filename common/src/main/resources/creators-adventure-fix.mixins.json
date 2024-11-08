@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "dev.misakacloud.ctsadvfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "tmf.EntityHelperMixin",
+    "tmf.LassoItemMixin",
+    "ultimine.UltimineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
